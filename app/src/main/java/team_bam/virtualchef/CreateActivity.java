@@ -56,10 +56,10 @@ public class CreateActivity extends AppCompatActivity {
         RecipeWriter writer = new RecipeWriter();
         String title = recipeTitle.getText().toString();
         String z = "";
-        String recipeType = "";
-        String servingSize = "";
-        String ingredients = "";
-        String steps = "";
+        String type = recipeType.getSelectedItem().toString();
+        String size = servingSize.getText().toString();
+        String ingredients = writer.ingredientsName(title);
+        String steps = writer.stepsName(title);
         Bundle bundle = new Bundle();
         boolean isSuccess = false;
 
@@ -79,27 +79,18 @@ public class CreateActivity extends AppCompatActivity {
                         z = "check internet connection";
                         Toast.makeText(getBaseContext(),z,Toast.LENGTH_LONG).show();
                     }else{
-                        String query = "Select * from MainIndex where `Recipe Title` = \'"
-                                +title+"\';";
+                        bundle.putString("recipeTitle",title);
+                        bundle.putString("recipeType",type);
+                        bundle.putString("servingSize",size);
+                        bundle.putString("ingredients",ingredients);
+                        bundle.putString("steps",steps);
+                        String query = "insert into MainIndex(`Recipe Title`,`Recipe Type`,`Serving"
+                                +" Size`,`Ingredients`,`Steps`)"
+                                +"values(\'"+title+"\',\'"+type+"\',\'"+size+"\',\'"+ingredients
+                                +"\',\'"+steps+"\')";
                         Statement state = con.createStatement();
-                        ResultSet result = state.executeQuery(query);
-                        if(result.next()){
-                            /*recipeType = result.getString(2);
-                            servingSize = result.getString(3);
-                            ingredients = result.getString(4);
-                            steps = result.getString(5);
-                            bundle.putString("recipeTitle",title);
-                            bundle.putString("recipeType",recipeType);
-                            bundle.putString("servingSize",servingSize);
-                            bundle.putString("ingredients",ingredients);
-                            bundle.putString("steps",steps);*/
-                            z = "Search Successful";
-                            System.out.println(title);
-                            System.out.println("Type: " + recipeType);
-                            System.out.println("Serving Size: " + servingSize);
-                        }else{
-                            z = "Recipe is not in database";
-                        }
+                        state.executeUpdate(query);
+                        z = "Register Successful";
                         isSuccess = true;
                     }
                 }catch (Exception ex){
