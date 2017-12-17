@@ -5,8 +5,8 @@
  */
 package team_bam.virtualchef;
 
-import java.sql.SQLException;
-import java.util.Scanner;
+import java.sql.*;
+import java.util.*;
 
 /**
  * This program will Write a recipe selected based on the input of a
@@ -14,7 +14,7 @@ import java.util.Scanner;
  */
 public class RecipeWriter {
     private static Scanner input = new Scanner(System.in);
-    
+
     /**
      * This method creates the name for the ingredients column in the database,
      * the name of this ingredients will create/link the new ingredients table
@@ -31,7 +31,7 @@ public class RecipeWriter {
         }
         return recipeTitle;
     }
-    
+
     /**
      * This method creates the name for the steps column in the database,
      * the name of this ingredients will create/link the new ingredients table

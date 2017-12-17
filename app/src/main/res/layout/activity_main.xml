@@ -4,40 +4,60 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
-    android:background="@color/colorPrimary"
-    tools:context="team_bam.virtualchef.MainActivity">
+    android:background="#e91010"
+    tools:context="com.example.toph.loginsqltest.MainActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical"
         android:gravity="center"
-        android:background="@color/colorAccent"
         android:layout_margin="20dp">
         <TextView
-            android:text="@string/slogan"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:text="COOK||CREATE||SHARE"
             android:textSize="32sp"
-            android:textColor="#000"
             android:gravity="center"
+            android:textColor="#fff"
+            android:layout_marginBottom="20dp"/>
+        background="">
+        <EditText
+            android:id="@+id/et_title"
+            android:hint="Recipe Title"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:background="#9f9f9f"
             android:layout_width="match_parent"
-            android:layout_height="40dp"/>
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"/>
+        <EditText
+            android:id="@+id/et_type"
+            android:hint="Recipe Type"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:background="#9f9f9f"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"/>
+        <EditText
+            android:id="@+id/et_servingsize"
+            android:hint="Serving Size"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:background="#9f9f9f"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"/>
         <Button
-            android:id="@+id/btn_choosesearch"
-            android:text="@string/chooseSearch"
-            android:background="@color/colorButton"
+            android:id="@+id/btn_register"
+            android:text="Register"
+            android:background="#3acbd6"
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/btn_choosecreate"
-            android:text="@string/chooseCreate"
-            android:background="@color/colorButton"
-            android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
-    </LinearLayout>
 
+    </LinearLayout>
 
 
 </LinearLayout>
