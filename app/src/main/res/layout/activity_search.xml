@@ -7,7 +7,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="@color/colorPrimary"
-    tools:context="team_bam.virtualchef.MainActivity">
+    tools:context="team_bam.virtualchef.SearchActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,28 +16,36 @@
         android:background="@color/colorAccent"
         android:layout_margin="20dp">
         <TextView
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
             android:text="@string/slogan"
             android:textSize="32sp"
-            android:textColor="#000"
             android:gravity="center"
+            android:textColor="#000"
+            android:layout_marginBottom="20dp"/>
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="40dp"/>
+            android:layout_height="40dp"
+            android:text="@string/searchInstructions"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="#000"
+            android:layout_marginBottom="20dp"/>
+        <EditText
+            android:id="@+id/et_titlesearch"
+            android:hint="@string/titleHint"
+            android:singleLine="true"
+            android:background="@color/colorButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"/>
         <Button
-            android:id="@+id/btn_choosesearch"
+            android:id="@+id/btn_searchrecipe"
             android:text="@string/chooseSearch"
             android:background="@color/colorButton"
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
-        <Button
-            android:id="@+id/btn_choosecreate"
-            android:text="@string/chooseCreate"
-            android:background="@color/colorButton"
-            android:layout_marginTop="30dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
     </LinearLayout>
-
-
 
 </LinearLayout>

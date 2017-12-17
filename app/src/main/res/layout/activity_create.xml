@@ -7,7 +7,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="@color/colorPrimary"
-    tools:context="team_bam.virtualchef.MainActivity">
+    tools:context="team_bam.virtualchef.CreateActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -22,22 +22,43 @@
             android:gravity="center"
             android:layout_width="match_parent"
             android:layout_height="40dp"/>
-        <Button
-            android:id="@+id/btn_choosesearch"
-            android:text="@string/chooseSearch"
-            android:background="@color/colorButton"
-            android:layout_marginTop="30dp"
+        <TextView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="40dp"
+            android:text="@string/createInstructions"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="#000"
+            android:layout_marginBottom="20dp"/>
+        <EditText
+            android:id="@+id/et_titlecreate"
+            android:hint="@string/titleHint"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:background="@color/colorButton"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"/>
+        <Spinner
+            android:id="@+id/spnr_type"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+        <EditText
+            android:id="@+id/et_servingsize"
+            android:hint="@string/sizeHint"
+            android:singleLine="true"
+            android:textColor="#fff"
+            android:background="@color/colorButton"
+            android:gravity="center"
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"/>
         <Button
-            android:id="@+id/btn_choosecreate"
+            android:id="@+id/btn_createrecipe"
             android:text="@string/chooseCreate"
             android:background="@color/colorButton"
             android:layout_marginTop="30dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
-
-
-
 </LinearLayout>

@@ -1,3 +1,10 @@
 <resources>
     <string name="app_name">Virtual Chef</string>
+    <string name="slogan">COOK||CREATE||SHARE</string>
+    <string name="chooseSearch">Search</string>
+    <string name="chooseCreate">Create</string>
+    <string name="searchInstructions">Search for recipes created and shared by people</string>
+    <string name="createInstructions">Place the Title, Type, and Serving Size of the Recipe</string>
+    <string name="titleHint">Recipe Title</string>
+    <string name="sizeHint">Size</string>
 </resources>
