@@ -1,6 +1,7 @@
 package team_bam.virtualchef;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -84,12 +85,24 @@ public class CreateActivity extends AppCompatActivity {
                         bundle.putString("servingSize",size);
                         bundle.putString("ingredients",ingredients);
                         bundle.putString("steps",steps);
+
+
+                        //SQL Commands Start here
                         String query = "insert into MainIndex(`Recipe Title`,`Recipe Type`,`Serving"
                                 +" Size`,`Ingredients`,`Steps`)"
                                 +"values(\'"+title+"\',\'"+type+"\',\'"+size+"\',\'"+ingredients
                                 +"\',\'"+steps+"\')";
                         Statement state = con.createStatement();
                         state.executeUpdate(query);
+                        query = "create table "+ingredients+"(\n"
+                                + "Ingredient varchar(80) not null primary key,\n"
+                                + "`Measurement Type` varchar(20) not null,\n"
+                                + "`Measurement Size` varchar(10) not null)";
+                        state.execute(query);
+                        query = "create table "+steps+"(\n"
+                                + "`Step Number` int not null primary key auto_increment,\n"
+                                + "`Content` blob not null)\n";
+                        state.execute(query);
                         z = "Register Successful";
                         isSuccess = true;
                     }
@@ -106,6 +119,10 @@ public class CreateActivity extends AppCompatActivity {
         protected void onPostExecute(String s){
             if (isSuccess){
                 Toast.makeText(getBaseContext(), z,Toast.LENGTH_LONG).show();
+                Intent in = new Intent(CreateActivity.this,IngredientsStepsActivity.class);
+                in.putExtras(bundle);
+                startActivity(in);
+                finish();
             }
             progressDialog.hide();
         }

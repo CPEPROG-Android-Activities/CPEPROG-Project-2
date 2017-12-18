@@ -2,9 +2,20 @@
     <string name="app_name">Virtual Chef</string>
     <string name="slogan">COOK||CREATE||SHARE</string>
     <string name="chooseSearch">Search</string>
+    <string name="chooseHome">Home</string>
     <string name="chooseCreate">Create</string>
     <string name="searchInstructions">Search for recipes created and shared by people</string>
     <string name="createInstructions">Place the Title, Type, and Serving Size of the Recipe</string>
     <string name="titleHint">Recipe Title</string>
     <string name="sizeHint">Size</string>
+    <string name="addIngredient">Add Ingredient</string>
+    <string name="addProcedure">Add Procedure</string>
+    <string name="ingredients">Ingredients</string>
+    <string name="steps">Procedures</string>
+    <string name="step">Procedure</string>
+    <string name="ingredientName">Ingredient Name</string>
+    <string name="measurement">Measurement</string>
+    <string name="measurementType">Measurement Type</string>
+    <string name="addIngredientsInstruction">Add the name of the Ingredient, the type of measurement used and the measurement</string>
+    <string name="addStepsInstruction">Add the Procedure of the Recipe in order of your choice</string>
 </resources>

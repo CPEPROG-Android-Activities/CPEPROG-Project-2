@@ -17,7 +17,7 @@
         android:layout_margin="20dp">
         <TextView
             android:text="@string/slogan"
-            android:textSize="32sp"
+            android:textSize="30sp"
             android:textColor="#000"
             android:gravity="center"
             android:layout_width="match_parent"
@@ -34,7 +34,6 @@
             android:id="@+id/et_titlecreate"
             android:hint="@string/titleHint"
             android:singleLine="true"
-            android:textColor="#fff"
             android:background="@color/colorButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
@@ -47,7 +46,6 @@
             android:id="@+id/et_servingsize"
             android:hint="@string/sizeHint"
             android:singleLine="true"
-            android:textColor="#fff"
             android:background="@color/colorButton"
             android:gravity="center"
             android:layout_width="50dp"

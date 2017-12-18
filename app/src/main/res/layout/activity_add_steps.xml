@@ -7,7 +7,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="@color/colorPrimary"
-    tools:context="team_bam.virtualchef.MainActivity">
+    tools:context="team_bam.virtualchef.CreateActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,28 +16,27 @@
         android:background="@color/colorAccent"
         android:layout_margin="20dp">
         <TextView
-            android:text="@string/slogan"
-            android:textSize="30sp"
-            android:textColor="#000"
+            android:text="@string/addStepsInstruction"
+            android:textSize="18sp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="10dp"/>
+        <TextView
+            android:id="@+id/txt_procedureNumber"
+            android:text="Procedure Number"
+            android:textSize="18sp"
             android:gravity="center"
             android:layout_width="match_parent"
-            android:layout_height="40dp"/>
-        <Button
-            android:id="@+id/btn_choosesearch"
-            android:text="@string/chooseSearch"
-            android:background="@color/colorButton"
-            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_procedure"
+            android:hint="@string/step"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button
-            android:id="@+id/btn_choosecreate"
-            android:text="@string/chooseCreate"
-            android:background="@color/colorButton"
-            android:layout_marginTop="30dp"
+            android:id="@+id/btn_returnStepValue"
+            android:text="@string/addProcedure"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
-
-
-
 </LinearLayout>

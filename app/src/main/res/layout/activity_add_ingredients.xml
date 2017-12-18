@@ -7,7 +7,7 @@
     android:gravity="center"
     android:orientation="vertical"
     android:background="@color/colorPrimary"
-    tools:context="team_bam.virtualchef.MainActivity">
+    tools:context="team_bam.virtualchef.CreateActivity">
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -16,28 +16,32 @@
         android:background="@color/colorAccent"
         android:layout_margin="20dp">
         <TextView
-            android:text="@string/slogan"
-            android:textSize="30sp"
-            android:textColor="#000"
-            android:gravity="center"
+            android:text="@string/addIngredientsInstruction"
+            android:textSize="18sp"
             android:layout_width="match_parent"
-            android:layout_height="40dp"/>
-        <Button
-            android:id="@+id/btn_choosesearch"
-            android:text="@string/chooseSearch"
-            android:background="@color/colorButton"
-            android:layout_marginTop="30dp"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_ingredientName"
+            android:hint="@string/ingredientName"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_measurement"
+            android:hint="@string/measurement"
+            android:singleLine="true"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/et_measurementType"
+            android:hint="@string/measurementType"
+            android:singleLine="true"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
         <Button
-            android:id="@+id/btn_choosecreate"
-            android:text="@string/chooseCreate"
-            android:background="@color/colorButton"
-            android:layout_marginTop="30dp"
+            android:id="@+id/btn_returnIngredientValue"
+            android:text="@string/addIngredient"
             android:layout_width="match_parent"
             android:layout_height="wrap_content" />
     </LinearLayout>
-
-
-
 </LinearLayout>
