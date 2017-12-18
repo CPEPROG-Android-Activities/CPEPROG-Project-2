@@ -15,7 +15,7 @@ import java.sql.SQLException;
 public class ConnectionClass {
     String clas = "com.mysql.jdbc.Driver";
     //IP addresses: [Toph:192.168.1.4],[Pat:192.168.0.158]
-    String url = "jdbc:mysql://192.168.1.6/recipes";//change numbers to your IP for the meantime (cmd>ipconfig>IPv4 address)
+    String url = "jdbc:mysql://192.168.1.4/recipes";//change numbers to your IP for the meantime (cmd>ipconfig>IPv4 address)
     //TODO @Neil,Toph: please create account (user:team_bam, no password) with all privileges on phpMyAdmin so we don't need to change every now and then
     String userName = "team_bam"; //Username and Passcode is needed because it does not synce of "root" is the one used
     String password = "";

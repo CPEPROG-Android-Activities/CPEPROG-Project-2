@@ -3,7 +3,6 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CPEPROG-Project-2.iml" filepath="$PROJECT_DIR$/CPEPROG-Project-2.iml" />
-      <module fileurl="file://C:\Users\ChristophJohnEric\AndroidStudioProjects\CPEPROG-Project-2\VirtualChef.iml" filepath="C:\Users\ChristophJohnEric\AndroidStudioProjects\CPEPROG-Project-2\VirtualChef.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>

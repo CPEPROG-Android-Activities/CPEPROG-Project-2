@@ -109,8 +109,8 @@ public class DisplayRecipeActivity extends AppCompatActivity {
                             ResultSet ingredientsBreakdown = state.executeQuery(query);
                             while (ingredientsBreakdown.next()) {
                                 fullIngredients += "\n"
-                                        +ingredientsBreakdown.getString(3) + "\t"
-                                        + ingredientsBreakdown.getString(2) + "\t"
+                                        +ingredientsBreakdown.getString(2) + "\t"
+                                        + ingredientsBreakdown.getString(3) + "\t"
                                         + ingredientsBreakdown.getString(1);
                                 System.out.println(fullIngredients);
                             }
